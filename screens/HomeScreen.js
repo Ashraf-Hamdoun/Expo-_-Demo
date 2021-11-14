@@ -1,8 +1,9 @@
 import React from "react";
-import TestScreen from "./TestScreen";
+
+import TextForTest from "../Components/TextForTest";
 
 function HomeScreen() {
-  return <TestScreen title="Home Screen" />;
+  return <TextForTest title="Home Screen" />;
 }
 
 export default HomeScreen;

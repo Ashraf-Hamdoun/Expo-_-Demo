@@ -1,8 +1,9 @@
 import React from "react";
-import TestScreen from "./TestScreen";
+
+import TextForTest from "../Components/TextForTest";
 
 function SettingsScreen() {
-  return <TestScreen title="Settings Screen" />;
+  return <TextForTest title="Settings Screen" />;
 }
 
 export default SettingsScreen;

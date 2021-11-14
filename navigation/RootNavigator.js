@@ -2,7 +2,7 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import BottomTabNavigator from "./BottomTabNavigator";
-import ModalScreen from "../screens/ModalScreen";
+import AboutScreen from "../screens/AboutScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +16,7 @@ function RootNavigator() {
       />
 
       <Stack.Group screenOptions={{ presentation: "modal" }}>
-        <Stack.Screen name="Modal" component={ModalScreen} />
+        <Stack.Screen name="About" component={AboutScreen} />
       </Stack.Group>
     </Stack.Navigator>
   );

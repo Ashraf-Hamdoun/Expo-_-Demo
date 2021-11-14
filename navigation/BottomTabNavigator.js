@@ -1,11 +1,11 @@
 import React from "react";
-import { FontAwesome } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import HomeScreen from "../screens/HomeScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 
 import PressableBtn from "../Components/PressableBtn";
+import TabBarIcon from "../Components/TabBarIcon";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -22,7 +22,7 @@ function BottomTabNavigator() {
         component={HomeScreen}
         options={({ navigation }) => ({
           title: "Home Page",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
           headerRight: () => (
             <PressableBtn icon="info-circle" navigation={navigation} />
           ),
@@ -33,7 +33,7 @@ function BottomTabNavigator() {
         component={SettingsScreen}
         options={{
           title: "Settings page",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="gear" color={color} />,
         }}
       />
     </BottomTab.Navigator>
@@ -41,7 +41,3 @@ function BottomTabNavigator() {
 }
 
 export default BottomTabNavigator;
-
-function TabBarIcon(props) {
-  return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />;
-}

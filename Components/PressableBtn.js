@@ -5,7 +5,7 @@ import { FontAwesome } from "@expo/vector-icons";
 const PressableBtn = (props) => {
   return (
     <Pressable
-      onPress={() => props.navigation.navigate("Modal")}
+      onPress={() => props.navigation.navigate("About")}
       style={({ pressed }) => ({
         opacity: pressed ? 0.5 : 1,
       })}
